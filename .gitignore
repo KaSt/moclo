@@ -1,0 +1,28 @@
+# Ignore object files, executables, and libraries
+*.o
+*.a
+*.so
+*.exe
+
+# Ignore build directories
+/build
+/bin
+/obj
+
+# Ignore Unity test build artifacts
+test_moclo
+
+# Ignore compiled binary files
+moclo
+
+# Ignore temporary files
+*.tmp
+*.log
+*.swp
+*.swo
+
+# Ignore MacOS specific files
+.DS_Store
+
+# Ignore Visual Studio Code settings
+.vscode/

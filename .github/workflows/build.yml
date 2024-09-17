@@ -1,0 +1,21 @@
+name: Build
+
+on:
+  push:
+    branches: [master, dev]
+  pull_request:
+    branches: [master, dev]
+
+permissions: read-all
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
+      - name: Install dependencies
+        run: |
+          sudo apt update && sudo apt install -y make gcc
+      - name: Build this
+        run: make

@@ -1,0 +1,12 @@
+name: moclo build
+run-name: ${{ gitea.actor }} is building moclo 🚀
+on: [push]
+
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out moclo code
+        uses: actions/checkout@v4
+      - name: build code
+        run: make

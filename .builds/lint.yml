@@ -1,0 +1,10 @@
+image: alpine/3.20
+packages:
+  - gcc
+  - make
+  - cppcheck
+secrets:
+  - 249728dd-f22c-415c-b9ff-41b922029c33
+tasks:
+  - lint: |
+      cd moclo && cppcheck --enable=all --suppress=missingIncludeSystem .

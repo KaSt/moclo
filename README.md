@@ -6,9 +6,13 @@
 
 ### The Most Cloned Repository
 
-This repository is useless, unless you're curious about online repositories.
+This repository is useless, unless you're curious about online repositories. 
+GitHub, GitLab, SourceHut, ... You know the likes.
 
-A small C program has been replicated to various onlines code platforms. When available, workflow actions have been included. These will build, lint and run tests. They can serve as a basic template.
+A small C program has been replicated to various online code platforms. 
+
+When available, workflow actions have been included. 
+These will build, lint and run tests. They can serve as a basic template.
 
 I'd love to see this repository spread, so feel free to clone it, fork it, create PRs to include other online servers and add their build badge when available.
 

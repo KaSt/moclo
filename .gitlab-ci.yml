@@ -11,7 +11,7 @@ build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
     - echo Install Dependencies
-    - apt update && apt install -y build-essential cppcheck
+    - apt update && apt install -y build-essential
     - echo "Compiling the code..."
     - make
 
@@ -19,6 +19,7 @@ lint-test-job:   # This job also runs in the test stage.
   stage: lint    # It can run at the same time as unit-test-job (in parallel).
   script:
     - echo "Linting code..."
+    - apt update && apt install -y build-essential cppcheck
     - cppcheck --enable=all --suppress=missingIncludeSystem .
 
 unit-test-job:   # This job runs in the test stage.
@@ -26,5 +27,6 @@ unit-test-job:   # This job runs in the test stage.
   script:
     - echo "Running unit tests..."
     - git submodule update --init --recursive
+    - apt update && apt install -y build-essential
     - make test
 

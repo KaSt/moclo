@@ -8,8 +8,7 @@ jobs:
     steps:
       - name: Check out moclo code
         uses: actions/checkout@v4
+      - name: Install cppcheck
+        run: apt update && apt install -y cppcheck
       - name: Lint code
-        uses: megalinter/megalinter/flavors/c_cpp@v8
-        env:
-          DEFAULT_BRANCH: dev
-          VALIDATE_ALL_CODEBASE: false
+        run: cppcheck --enable=all --suppress=missingIncludeSystem .

@@ -26,7 +26,7 @@ unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
   script:
     - echo "Running unit tests..."
+    - apt update && apt install -y build-essential cppcheck git
     - git submodule update --init --recursive
-    - apt update && apt install -y build-essential
     - make test
 

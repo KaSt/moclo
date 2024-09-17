@@ -3,7 +3,7 @@ run-name: ${{ gitea.actor }} is building moclo 🚀
 on: [push]
 
 jobs:
-  Lint:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out moclo code

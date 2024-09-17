@@ -5,10 +5,11 @@ name: 'Test'
 on: [push]
 
 jobs:
-  lint:
+  test:
     runs-on: docker
     steps:
       - uses: actions/checkout@v4
+        run: git submodule update --init --recursive
       - name: Install dependencies
         run: apt update && apt install -y libssl-dev build-essential cppcheck
       - name: Test this

@@ -1,0 +1,14 @@
+name: moclo test
+run-name: ${{ gitea.actor }} is testing moclo 🚀
+on: [push]
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out moclo code
+        uses: actions/checkout@v4
+        run: |
+          git submodule update --init --recursive
+      - name: build code
+        run: make test

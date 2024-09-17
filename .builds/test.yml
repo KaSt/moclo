@@ -6,4 +6,4 @@ secrets:
   - 249728dd-f22c-415c-b9ff-41b922029c33
 tasks:
   - test: |
-      cd moclo && make test
+      cd moclo && git submodule update --init --recursive && make test

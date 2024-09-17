@@ -1,0 +1,30 @@
+default:
+  image: debian:latest
+  retry: 3
+
+stages:          # List of stages for jobs, and their order of execution
+  - build
+  - lint 
+  - test
+
+build-job:       # This job runs in the build stage, which runs first.
+  stage: build
+  script:
+    - echo Install Dependencies
+    - apt install -y build-essential
+    - echo "Compiling the code..."
+    - make
+
+lint-test-job:   # This job also runs in the test stage.
+  stage: lint    # It can run at the same time as unit-test-job (in parallel).
+  script:
+    - echo "Linting code..."
+    - cppcheck --enable=all --suppress=missingIncludeSystem .
+
+unit-test-job:   # This job runs in the test stage.
+  stage: test    # It only starts when the job in the build stage completes successfully.
+  script:
+    - echo "Running unit tests..."
+    - git submodule update --init --recursive
+    - make test
+

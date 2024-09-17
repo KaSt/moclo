@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Check out moclo code
         uses: actions/checkout@v4
+      - name: Ipdate submodules
         run: |
           git submodule update --init --recursive
       - name: build code

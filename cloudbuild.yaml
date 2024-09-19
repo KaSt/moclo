@@ -1,8 +1,8 @@
 steps:
-- name: 'build'
+- name: 'ubuntu'
   script: |    
     make
-- name: 'test'
+- name: 'ubuntu'
   script: |
     git submodule update --init --recursive
     make test

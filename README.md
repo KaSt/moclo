@@ -6,7 +6,6 @@
 
 
 ### The Most Cloned Repository
-
 This repository is useless, unless you're curious about online repositories. 
 GitHub, GitLab, SourceHut, ... You know the likes.
 
@@ -14,6 +13,23 @@ A small C program has been replicated to various online code platforms.
 
 When available, workflow actions have been included. 
 These will build, lint and run tests. They can serve as a basic template.
+
+### Current status
+MoClo has been deployed to the following services:
+- Azure
+- Github
+- Codeberg
+- Sourcehut
+- Gitlab
+- Gitea
+- Sourceforge
+- Gitud
+- Buddy works
+
+In case you're reading this, it's you're on one of those.
+
+Most are online code repositories having pipelines, some are cloud pipelines services.
+
 
 I'd love to see this repository spread, so feel free to clone it, fork it, create PRs to include other online servers and add their build badge when available.
 

@@ -11,6 +11,6 @@ blocks:
         - name: Build
           commands:
             - checkout
-            - apt update
-            - apt install -y build-essential
+            - sudo apt update
+            - sudo apt install -y build-essential
             - make

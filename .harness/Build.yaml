@@ -1,0 +1,17 @@
+kind: pipeline
+spec:
+  stages:
+  - name: build
+    spec:
+      platform:
+        arch: amd64
+        os: linux
+      steps:
+      - spec:
+          container:
+            image: ubuntu:latest
+          script:
+          - apt update && apt install -y build-essential && make
+        type: run
+    type: ci
+version: 1

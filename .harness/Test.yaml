@@ -1,7 +1,7 @@
 kind: pipeline
 spec:
   stages:
-  - name: build
+  - name: test
     spec:
       platform:
         arch: amd64
@@ -13,7 +13,7 @@ spec:
           script: |-
             apt update
             apt install -y build-essential
-            make
+            make test
         type: run
     type: ci
 version: 1

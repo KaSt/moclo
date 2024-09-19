@@ -1,7 +1,7 @@
 kind: pipeline
 spec:
   stages:
-  - name: build
+  - name: Lint
     spec:
       platform:
         arch: amd64
@@ -12,8 +12,8 @@ spec:
             image: ubuntu:latest
           script: |-
             apt update
-            apt install -y build-essential
-            make
+            apt install -y build-essential cppcheck
+            cppcheck --enable=all --suppress=missingIncludeSystem .
         type: run
     type: ci
 version: 1

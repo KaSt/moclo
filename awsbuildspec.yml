@@ -1,0 +1,22 @@
+version: 0.2
+
+env:
+  parameter-store:
+    LOGIN_PASSWORD: /CodeBuild/dockerLoginPassword
+
+phases:
+  install:
+    commands:
+      - echo Install dependencies...
+      - apt-get update -y
+      - apt-get install -y build-essential make
+  build:
+    commands:
+      - echo Build this
+      - make
+  test:
+    commands:
+      - echo Test this
+      - git submodule update --init --recursive
+      - make test
+

@@ -16,10 +16,12 @@ These will build, lint and run tests. They can serve as a basic template.
 
 ### Current status
 MoClo has been deployed to the following services:
-- Azure
+- AWS Pipelines
+- Azure DevOps
 - Buddy
 - Codeberg
 - Drone
+- Google Cloud Build
 - Github
 - Gitea
 - Gitlab

@@ -46,6 +46,20 @@ push:
 	git push sf master
 	git push sh master
 
+
+pull:
+	git pull az master
+	git pull bu master
+	git pull cb master
+	git pull gi master
+	git pull gl master
+	git pull gu master
+	git pull ha master
+	git pull ka master
+	git pull origin master
+	git pull sf master
+	git pull sh master
+
 # Clean up build files
 clean:
 	rm -f $(OBJS) $(TARGET)

@@ -17,7 +17,7 @@ jobs:
     # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
     steps:
       # Build the code as the first step.
-      - build-this
+      - checkout
       - run:
           name: "Build this"
           command: "make"
@@ -34,7 +34,7 @@ jobs:
     # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
     steps:
       # Build the code as the first step.
-      - test-this
+      - checkout
       - run:
           name: "Test this"
           command: "make test"

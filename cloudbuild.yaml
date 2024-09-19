@@ -1,8 +1,10 @@
 steps:
+# Build
 - name: 'ubuntu'
   script: |    
     apt update && apt install -y build-essential make
     make
+# Test    
 - name: 'ubuntu'
   script: |
     apt update && apt install -y build-essential make git

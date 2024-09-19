@@ -2,6 +2,7 @@ kind: pipeline
 spec:
   stages:
   - name: build
+    when: build.event == "push"
     spec:
       platform:
         arch: amd64

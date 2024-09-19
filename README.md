@@ -25,6 +25,7 @@ MoClo has been deployed to the following services:
 - Sourceforge
 - Gitud
 - Buddy works
+- Drone
 
 In case you're reading this, it's you're on one of those.
 

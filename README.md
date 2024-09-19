@@ -17,15 +17,15 @@ These will build, lint and run tests. They can serve as a basic template.
 ### Current status
 MoClo has been deployed to the following services:
 - Azure
-- Github
+- Buddy
 - Codeberg
-- Sourcehut
-- Gitlab
-- Gitea
-- Sourceforge
-- Gitud
-- Buddy works
 - Drone
+- Github
+- Gitea
+- Gitlab
+- Gitud
+- Sourceforge
+- Sourcehut
 
 In case you're reading this, it's you're on one of those.
 

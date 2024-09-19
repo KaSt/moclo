@@ -5,3 +5,11 @@
     - "refs/heads/master"
   fail_on_prepare_env_warning: true
   resources: "NANO"
+  actions:
+  - action: "make"
+    type: "BUILD"
+    docker_image_name: "library/gcc"
+    docker_image_tag: "14.1.0"
+    execute_commands:
+    - "make"
+    shell: "BASH"

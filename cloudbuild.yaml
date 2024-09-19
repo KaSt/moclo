@@ -1,0 +1,8 @@
+steps:
+- name: 'build'
+  script: |    
+    make
+- name: 'test'
+  script: |
+    git submodule update --init --recursive
+    make test

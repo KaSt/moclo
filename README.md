@@ -26,6 +26,7 @@ MoClo has been deployed to the following services:
 - [Github](https://github.com/KaSt/moclo/tree/master/.github/workflows)
 - [Gitlab](https://github.com/KaSt/moclo/blob/master/.gitlab-ci.yml)
 - [Gitgud](https://github.com/KaSt/moclo/blob/master/.gitlab-ci.yml)
+- [Gitness](https://github.com/KaSt/moclo/tree/master/.harness)
 - [Google Cloud Build](https://github.com/KaSt/moclo/blob/master/cloudbuild.yaml)
 - [Sourcehut](https://github.com/KaSt/moclo/tree/circleci-project-setup/.builds)
 

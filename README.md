@@ -16,18 +16,18 @@ These will build, lint and run tests. They can serve as a basic template.
 
 ### Current status
 MoClo has been deployed to the following services:
-- AWS Pipelines
-- Azure DevOps
-- Buddy
-- Codeberg
-- Drone
-- Google Cloud Build
-- Github
-- Gitea
-- Gitlab
-- Gitud
-- Sourceforge
-- Sourcehut
+- [AWS Pipelines](https://github.com/KaSt/moclo/blob/master/awsbuildspec.yml)
+- [Azure DevOps](https://github.com/KaSt/moclo/blob/master/azure-pipelines.yml)
+- [Buddy](https://github.com/KaSt/moclo/tree/master/.buddy)
+- [CircleCI](https://github.com/KaSt/moclo/tree/master/.circleci)
+- [Codeberg](https://github.com/KaSt/moclo/tree/master/.forgejo/workflows)
+- [Drone](https://github.com/KaSt/moclo/blob/master/.drone.yml)
+- [Gitea](https://github.com/KaSt/moclo/tree/master/.gitea/workflows)
+- [Github](https://github.com/KaSt/moclo/tree/master/.github/workflows)
+- [Gitlab](https://github.com/KaSt/moclo/blob/master/.gitlab-ci.yml)
+- [Gitgud](https://github.com/KaSt/moclo/blob/master/.gitlab-ci.yml)
+- [Google Cloud Build](https://github.com/KaSt/moclo/blob/master/cloudbuild.yaml)
+- [Sourcehut](https://github.com/KaSt/moclo/tree/circleci-project-setup/.builds)
 
 In case you're reading this, it's you're on one of those.
 

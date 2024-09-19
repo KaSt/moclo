@@ -30,10 +30,8 @@ MoClo has been deployed to the following services:
 - [Google Cloud Build](https://github.com/KaSt/moclo/blob/master/cloudbuild.yaml)
 - [Sourcehut](https://github.com/KaSt/moclo/tree/circleci-project-setup/.builds)
 
-In case you're reading this, it's you're on one of those.
 
-Most are online code repositories having pipelines, some are cloud pipelines services.
-
+Every link above points to the pipeline definitions of the corresponding service. Mind that some may be reused as sharing the same server code (e.g. Gitlab and Gitgud). Some are self-hosted services too.
 
 I'd love to see this repository spread, so feel free to clone it, fork it, create PRs to include other online servers and add their build badge when available.
 

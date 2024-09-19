@@ -13,6 +13,7 @@ spec:
           script: |-
             apt update
             apt install -y build-essential
+            git submodule update --init --recursive
             make test
         type: run
     type: ci

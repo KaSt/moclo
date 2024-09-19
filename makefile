@@ -32,12 +32,25 @@ test: clean
 docker:
 	docker build -t moclo .
 
+
+push:
+	git push az master
+	git push bu master
+	git push cb master
+	git push gi master
+	git push gl master
+	git push gu master
+	git push ka master
+	git push origin master
+	git push sf master
+	git push sh master
+
 # Clean up build files
 clean:
 	rm -f $(OBJS) $(TARGET)
 	rm -fr test/test_moclo
 	rm -fr test/*.o
 	rm -fr test/unity/src/*.o
-	
+
 # Phony targets
 .PHONY: all clean

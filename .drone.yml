@@ -1,0 +1,18 @@
+kind: pipeline
+type: docker
+name: build-and-test
+
+steps:
+- name: build
+  commands:
+  - make
+  environment:
+    GOOS: linux
+    GOARCH: amd64
+- name: test
+  commands:
+  - git submodule update --init --recursive
+  - make test
+  environment:
+    GOOS: linux
+    GOARCH: amd64    

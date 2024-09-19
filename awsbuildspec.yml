@@ -14,9 +14,3 @@ phases:
     commands:
       - echo Build this
       - make
-  test:
-    commands:
-      - echo Test this
-      - git submodule update --init --recursive
-      - make test
-

@@ -12,7 +12,7 @@ spec:
             image: ubuntu:latest
           script: |-
             apt update
-            apt install -y build-essential
+            apt install -y build-essential git
             git submodule update --init --recursive
             make test
         type: run

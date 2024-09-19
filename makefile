@@ -40,6 +40,7 @@ push:
 	git push gi master
 	git push gl master
 	git push gu master
+	git push ha master
 	git push ka master
 	git push origin master
 	git push sf master

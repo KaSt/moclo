@@ -1,0 +1,29 @@
+version: v1.0
+name: Build
+agent:
+  machine:
+    type: f1-standard-2
+    os_image: ubuntu2204
+blocks:
+  - name: Build
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - checkout
+            - sudo apt update
+            - sudo apt install -y build-essential
+            - make
+        - name: Lint
+          commands:
+            - checkout
+            - sudo apt update
+            - sudo apt install -y build-essential cppcheck
+            - cppcheck --enable=all --suppress=missingIncludeSystem .
+        - name: Test
+          commands:
+            - checkout
+            - sudo apt update
+            - sudo apt install -y build-essential git
+            - git submodule update --init --recursive
+            - make test

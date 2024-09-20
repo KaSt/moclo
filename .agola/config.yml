@@ -1,0 +1,25 @@
+version: v0
+
+runs:
+  - name: build-lint-and-test
+    tasks:
+      - name: build go 1.12
+        runtime:
+          type: pod
+          arch: amd64
+          containers:
+            - image: ubuntu:latest
+        steps:
+          - clone:
+          - run:
+              name: install dependencies
+              command: apt update && apt install -y build-essential git cppcheck
+          - run:
+              name: build this
+              command: make
+          - run:
+              name: lint this
+              command: cppcheck --enable=all --inconclusive .
+          - run:
+              name: test this
+              command: git submodule update --init --recursive && make test

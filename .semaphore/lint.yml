@@ -1,0 +1,16 @@
+version: v1.0
+name: Lint
+agent:
+  machine:
+    type: f1-standard-2
+    os_image: ubuntu2204
+blocks:
+  - name: Lint
+    task:
+      jobs:
+        - name: Lint
+          commands:
+            - checkout
+            - sudo apt update
+            - sudo apt install -y build-essential cppcheck
+            - cppcheck --enable=all --suppress=missingIncludeSystem .

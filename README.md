@@ -28,7 +28,8 @@ MoClo has been deployed to the following services:
 - [Gitgud](https://github.com/KaSt/moclo/blob/master/.gitlab-ci.yml)
 - [Gitness](https://github.com/KaSt/moclo/tree/master/.harness)
 - [Google Cloud Build](https://github.com/KaSt/moclo/blob/master/cloudbuild.yaml)
-- [Sourcehut](https://github.com/KaSt/moclo/tree/circleci-project-setup/.builds)
+- [Semaphore](https://github.com/KaSt/moclo/tree/master/.semaphore/semaphore.yml)
+- [Sourcehut](https://github.com/KaSt/moclo/tree/master/.builds)
 
 
 Every link above points to the pipeline definitions of the corresponding service. Mind that some may be reused as sharing the same server code (e.g. Gitlab and Gitgud). Some are self-hosted services too.

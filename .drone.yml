@@ -1,6 +1,6 @@
 kind: pipeline
 type: docker
-name: build-and-test
+name: build-lint-and-test
 
 steps:
 - name: build
@@ -9,6 +9,15 @@ steps:
   environment:
     GOOS: linux
     GOARCH: amd64
+
+- name: lint
+  commands:
+  - apt update && apt install -y cppcheck
+  - cppcheck --enable=all --inconclusive .
+  environment:
+    GOOS: linux
+    GOARCH: amd64    
+
 - name: test
   commands:
   - git submodule update --init --recursive

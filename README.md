@@ -19,6 +19,7 @@ MoClo has been deployed to the following services:
 - [Agola](https://github.com/KaSt/moclo/blob/master/.agola/config.yml)
 - [AWS Pipelines](https://github.com/KaSt/moclo/blob/master/awsbuildspec.yml)
 - [Azure DevOps](https://github.com/KaSt/moclo/blob/master/azure-pipelines.yml)
+- [Bitbucket](https://github.com/KaSt/moclo/blob/master/bitbucket-pipelines.yml)
 - [Buddy](https://github.com/KaSt/moclo/tree/master/.buddy)
 - [CircleCI](https://github.com/KaSt/moclo/tree/master/.circleci)
 - [Codeberg](https://github.com/KaSt/moclo/tree/master/.forgejo/workflows)

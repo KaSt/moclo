@@ -1,0 +1,22 @@
+image: atlassian/default-image:3
+
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: 'Build this'
+          script:
+            - make
+      - step:
+          name: 'Lint this'
+          script:
+            - apt update && apt install -y cppcheck
+            - cppcheck --enable=all --inconclusive .
+      - step:
+          name: 'Test this'
+          script:
+            - apt update && apt install -y build-essential git
+            - git submodule update --init --recursive
+            - make test
+
+    

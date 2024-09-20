@@ -1,0 +1,17 @@
+- pipeline: "Lint"
+  events:
+  - type: "PUSH"
+    refs:
+    - "refs/heads/master"
+  fail_on_prepare_env_warning: true
+  resources: "NANO"
+  actions:
+  - action: "lint"
+    type: "BUILD"
+    docker_image_name: "library/gcc"
+    docker_image_tag: "14.1.0"
+    execute_commands:
+    - "make"
+    - "apt update && apt install -y cppcheck"
+    - "cppcheck --enable=all --inconclusive ."
+    shell: "BASH"

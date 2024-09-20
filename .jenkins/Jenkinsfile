@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build this',
+                sh 'apt update && apt install -y build-essential',
+                sh 'make'
+            }
+        }
+        stage('Lint') {
+            steps {
+                echo 'Lint this',
+                sh 'apt-get update && apt-get install -y cppcheck',
+                sh 'cppcheck --enable=all --inconclusive --force .'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test this',
+                sh 'apt update && apt install -y build-essential git',
+                sh 'git submodule update --init --recursive',
+                sh 'make test'
+            }
+        }
+    }
+}

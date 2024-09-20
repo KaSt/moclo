@@ -28,6 +28,7 @@ MoClo has been deployed to the following services:
 - [Gitgud](https://github.com/KaSt/moclo/blob/master/.gitlab-ci.yml)
 - [Gitness](https://github.com/KaSt/moclo/tree/master/.harness)
 - [Google Cloud Build](https://github.com/KaSt/moclo/blob/master/cloudbuild.yaml)
+- [Jenkins](https://github.com/KaSt/moclo/blob/master/.jenkins/Jenkinsfile)
 - [Semaphore](https://github.com/KaSt/moclo/tree/master/.semaphore/semaphore.yml)
 - [Sourcehut](https://github.com/KaSt/moclo/tree/master/.builds)
 

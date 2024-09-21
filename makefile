@@ -43,6 +43,7 @@ push:
 	git push ha master
 	git push ka master
 	git push origin master
+	git push one master
 	git push sf master
 	git push sh master
 
@@ -57,6 +58,7 @@ pull:
 	git pull ha master
 	git pull ka master
 	git pull origin master
+	git pull one master
 	git pull sf master
 	git pull sh master
 

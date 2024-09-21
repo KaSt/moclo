@@ -37,7 +37,7 @@ jobs:
     interpreter: !DefaultInterpreter
       commands:
       - set -e
-      - apk add --no-cache make git
+      - apk add --no-cache make gcc g++ git
       - git submodule update --init --recursive
       - make test
     useTTY: false

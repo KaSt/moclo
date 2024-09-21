@@ -18,7 +18,7 @@ These will build, lint and run tests. They can serve as a basic template when de
 MoClo pipelines:
 
 | Service | open-source | Pipeline |
-| -------- | ---- | ---- | 
+| -------- |:----:| ---- | 
 | [Agola](https://agola.io) | :white_check_mark: | [.agola/config.yml](https://github.com/KaSt/moclo/blob/master/.agola/config.yml) |
 | [AWS Pipelines](https://aws.amazon.com/codepipeline/) | &nbsp; | [awsbuildspec.yml](https://github.com/KaSt/moclo/blob/master/awsbuildspec.yml) |
 | [Azure Devops](https://azure.microsoft.com/en-us/products/devops) | &nbsp; | [azure-pipelines.yml](https://github.com/KaSt/moclo/blob/master/azure-pipelines.yml) |

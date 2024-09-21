@@ -31,6 +31,7 @@ MoClo has been deployed to the following services:
 - [Gitness](https://github.com/KaSt/moclo/tree/master/.harness)
 - [Google Cloud Build](https://github.com/KaSt/moclo/blob/master/cloudbuild.yaml)
 - [Jenkins](https://github.com/KaSt/moclo/blob/master/.jenkins/Jenkinsfile)
+- [OneDev](https://github.com/KaSt/moclo/blob/master/.onedev-buildspec.yml)
 - [Semaphore](https://github.com/KaSt/moclo/tree/master/.semaphore/semaphore.yml)
 - [Sourcehut](https://github.com/KaSt/moclo/tree/master/.builds)
 

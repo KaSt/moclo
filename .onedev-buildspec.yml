@@ -1,0 +1,45 @@
+version: 15
+jobs:
+- name: build-lint-and-test
+  steps:
+  - !CheckoutStep
+    name: checkout
+    cloneCredential: !DefaultCredential {}
+    withLfs: false
+    withSubmodules: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CommandStep
+    name: build
+    runInContainer: true
+    image: alpine
+    interpreter: !DefaultInterpreter
+      commands:
+      - set -e
+      - apk add --no-cache make gcc g++ git
+      - make
+    useTTY: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+
+  - !CommandStep
+    name: lint
+    runInContainer: true
+    image: alpine
+    interpreter: !DefaultInterpreter
+      commands:
+      - set -e
+      - apk add --no-cache cppcheck
+      - cppcheck --enable=all --inconclusive .
+    useTTY: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CommandStep
+    name: test
+    runInContainer: true
+    image: alpine
+    interpreter: !DefaultInterpreter
+      commands:
+      - set -e
+      - apk add --no-cache make git
+      - git submodule update --init --recursive
+      - make test
+    useTTY: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL

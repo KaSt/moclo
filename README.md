@@ -7,15 +7,15 @@
 
 ### The Most Cloned Repository
 This repository is useless, unless you're curious about online repositories. 
-GitHub, GitLab, SourceHut, ... You know the likes.
+GitHub, GitLab, SourceHut, you know the likes.
 
 A small C program has been replicated to various online code platforms. 
 
-When available, workflow actions have been included. 
-These will build, lint and run tests. They can serve as a basic template.
+When available, workflow actions, pipelines, have been included. 
+These will build, lint and run tests. They can serve as a basic template when deploying to this or that service.
 
 ### Current status
-MoClo has been deployed to the following services:
+MoClo pipelines:
 - [Agola](https://github.com/KaSt/moclo/blob/master/.agola/config.yml)
 - [AWS Pipelines](https://github.com/KaSt/moclo/blob/master/awsbuildspec.yml)
 - [Azure DevOps](https://github.com/KaSt/moclo/blob/master/azure-pipelines.yml)
@@ -34,10 +34,12 @@ MoClo has been deployed to the following services:
 - [OneDev](https://github.com/KaSt/moclo/blob/master/.onedev-buildspec.yml)
 - [Semaphore](https://github.com/KaSt/moclo/tree/master/.semaphore/semaphore.yml)
 - [Sourcehut](https://github.com/KaSt/moclo/tree/master/.builds)
+- [TeamCity Pipelines](https://github.com/KaSt/moclo/blob/master/.teamcity-pipeline.yml)
 
 
-Every link above points to the pipeline definitions of the corresponding service. Mind that some may be reused as sharing the same server code (e.g. Gitlab and Gitgud). Some are self-hosted services too.
+Every link above points to the pipeline definition of the corresponding service. Mind that some may be reused as sharing the same server code (e.g. Gitlab and Gitgud). 
+Some are only self-hosted services, some only offer pipelines and not repository hosting. It's pretty much a devops service soup.
 
-I'd love to see this repository spread, so feel free to clone it, fork it, create PRs to include other online servers and add their build badge when available.
+I'd love to see this repository spread, so feel free to clone it, fork it, create PRs to include other services and add their build badge when available.
 
 

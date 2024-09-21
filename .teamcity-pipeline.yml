@@ -1,0 +1,34 @@
+name: Moclo
+jobs:
+  Build:
+    name: Build
+    steps:
+      - type: script
+        docker-image: alpine:3.20
+        script-content: |-
+          apk update
+          apk add make alpine-sdk
+          make
+    runs-on: Linux-Medium
+  Lint:
+    name: Lint
+    steps:
+      - type: script
+        docker-image: alpine:3.20
+        script-content: |-
+          apk update
+          apk add cppcheck
+          cppcheck --enable=all --inconclusive .
+    runs-on: Linux-Medium
+  Test:
+    name: Test
+    steps:
+      - type: script
+        docker-image: alpine:3.20
+        script-content: |-
+          apk update
+          apk add make alpine-sdk git
+          git config --global --add safe.directory '*'
+          git submodule update --init --recursive
+          make test
+    runs-on: Linux-Medium
